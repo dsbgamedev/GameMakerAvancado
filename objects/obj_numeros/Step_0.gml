@@ -17,7 +17,13 @@ x += (_rigth - _left) * 5;
 
 y += (_down - _up) * 5;
 
-
+//Diminuindo o tempo de pouco em pocuo
+//Fazer diminuir a cada segundo
+//So diminui o tempo, enquanto ele for maior do que zero
+if(tempo > 0)
+{
+	tempo -= 1/room_speed ;
+}
 
 
 
