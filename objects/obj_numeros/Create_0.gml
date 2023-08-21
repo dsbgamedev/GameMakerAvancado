@@ -21,7 +21,7 @@ var _min = min(1,3,6,2,-9,1,2,4,8);
 //vspeed = 1;
 tempo = 0;
 //FRAC - Retorna a frção de um número
-var _teste = frac(2.98);
+//var _teste = frac(2.98);
 
 //delta_time - retorna o tempo em microseundos entre um fram e outro
 //Ele roda independente dos frames do jogo
@@ -37,6 +37,15 @@ segundos = 0;  //get_time divididos por 1 milhao, segundo chegou em 60 ele vai p
 minutos  = 0; //Segundos divididos por 60, minutos chegou em 60 ele vai para 0
 horas    = 0; //Minutos divididos por 60, horas chegou em 24 vai para 0
 dias     = 0; //Horas divididas por  24
+
+//SIGIN - Sinal, ela retorna "sinal" de um numero
+//Se o numero for positivo ela retorna  1 
+//Se o numero for negativo ela retorna -1 
+//Se o numero for zero ela retorna 0
+var _sigin = sign(-388);//pode usar essa função para ver se o numero é positivo, negativo ou zero
+
+show_message(_sigin);
+
 
 #endregion
 

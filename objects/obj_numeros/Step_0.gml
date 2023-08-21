@@ -36,3 +36,7 @@ horas = (get_timer() / 100) / 60 / 60;
 //Contando os dias
 dias = (get_timer() /100) / 60 / 60 / 24;
 
+if(mouse_x != x)//Nao correr risco do bug de sumir o objeto
+{
+	image_xscale = sign(mouse_x - x);
+}
