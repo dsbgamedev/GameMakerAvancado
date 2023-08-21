@@ -20,11 +20,19 @@ y += (_down - _up) * 5;
 //Diminuindo o tempo de pouco em pocuo
 //Fazer diminuir a cada segundo
 //So diminui o tempo, enquanto ele for maior do que zero
-if(tempo > 0)
+
+if(keyboard_check_pressed(vk_enter))
 {
-	tempo -= 1/room_speed ;
+	tempo = get_timer() / 1000000; //|delta_time / 1000000 - Dividi por 1 milhao porque o retorno é em microsegundos |
 }
 
 
-
+//Contando os segundos do jogo
+segundos =  get_timer() / 100;	
+//Definindo os meus minutos
+minutos = (get_timer() / 100) / 60;
+//Contando as hotas
+horas = (get_timer() / 100) / 60 / 60;
+//Contando os dias
+dias = (get_timer() /100) / 60 / 60 / 24;
 
