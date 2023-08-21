@@ -36,6 +36,7 @@
   "resources": [
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"Note2","path":"notes/Note2/Note2.yy",},},
     {"id":{"name":"obj_numeros","path":"objects/obj_numeros/obj_numeros.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
