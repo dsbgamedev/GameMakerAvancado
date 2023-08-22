@@ -1,6 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+#region variaveis
+velh     =  0;
+velv     =  0;
+max_velh =  3;
+max_velv =  3;
+acel     = .1;
+#endregion
+
 #region explicações
 //MAX - Retorna o maior numero em um conjunto
 //MIN - Retorna o menor numero em conjunto 
@@ -44,8 +52,19 @@ dias     = 0; //Horas divididas por  24
 //Se o numero for zero ela retorna 0
 var _sigin = sign(-388);//pode usar essa função para ver se o numero é positivo, negativo ou zero
 
-show_message(_sigin);
+//show_message(_sigin);
 
+//ABS - Retorna valor absoluto de um numero, ela retorna o número positivo
+//Checando a ditancia no eixo X do mouse para o coiso
+
+//CLAMP - Checa se um valor esta dentro de um intervalo
+//Se o valor não estiver dentro de um intervalo  
+//Ele traz o valor para dentro do intervalo e retorna o novo valor(valor entre o minimo ou maximo)
+//Se o valor estiver dentro do intervalo ele retorna o valor
+
+//
+var _clamp = clamp(5,0,10);
+show_message(_clamp);
 
 #endregion
 

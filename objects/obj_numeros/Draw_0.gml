@@ -4,10 +4,10 @@
 //Me desenhando
 draw_self();
 
-exibe_tempo();
+//exibe_tempo();
 
-exibe_jogo_tempo();
-
+//exibe_jogo_tempo();
+draw_text(20,20,velh);
 
 
 

@@ -10,12 +10,20 @@ _left  = max(keyboard_check(ord("A")), keyboard_check(vk_left));
 _up  = keyboard_check(ord("W")) or keyboard_check(vk_up)//Jeito que o professor faz.
 _down  = keyboard_check(vk_down) or keyboard_check(ord("S"));
 
-//Movendo
+//Movendo usando velh e velv
 //Quando eu for pra esquerda a direita fica com valor 0
 //Exemplo (1 - 0) * 5 = 5 indo pra direita || (0 - 1) * 5 = -5; indo pra esquerda
-x += (_rigth - _left) * 5;
+velh += (_rigth - _left) * acel;
 
-y += (_down - _up) * 5;
+velv += (_down - _up) * acel;
+
+//Impedindo que o velv paesse dos limites //2º forma de usar o clump
+velv = clamp(velv,-max_velv,max_velv);//impedi que velv tenha outro valor maior ou menos ele fica dentro do limite estabelecido
+//Alterando o eixo x e o eixo y com base nas velocidades
+//Garantindo que o movimento fique dentro do limite do max_velh
+//Se o velh for maior do que -max_velh ou max_velh, ele vai ficar dentro desse limite
+x += clamp(velh,-max_velh,max_velh);//1º forma de usar o clump
+y += velv;
 
 //Diminuindo o tempo de pouco em pocuo
 //Fazer diminuir a cada segundo
@@ -38,5 +46,15 @@ dias = (get_timer() /100) / 60 / 60 / 24;
 
 if(mouse_x != x)//Nao correr risco do bug de sumir o objeto
 {
-	image_xscale = sign(mouse_x - x);
+	//image_xscale = sign(mouse_x - x);
 }
+
+//Checando a distancia do mouse do eixo X para o coiso
+//show_debug_message(abs(mouse_x - x));//abs converte os numeros em sempre positivos
+
+//Se o X estiver dentro do intervalo entao ele nao altera o X
+//Se o X sair do intervalo, então ele coloca o X dentro do intervalo
+x = clamp(x,0 + sprite_width / 2, room_width - sprite_width / 2) ;
+show_debug_message(room_width);
+//Façam ele ficar dentro da room no eixo Y
+y = clamp(y,sprite_height, room_height);
