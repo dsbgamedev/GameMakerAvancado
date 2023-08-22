@@ -6,7 +6,11 @@ velh     =  0;
 velv     =  0;
 max_velh =  3;
 max_velv =  3;
-acel     = .1;
+acel     = .01;
+satura   = 0;
+
+
+
 #endregion
 
 #region explicações
@@ -50,7 +54,7 @@ dias     = 0; //Horas divididas por  24
 //Se o numero for positivo ela retorna  1 
 //Se o numero for negativo ela retorna -1 
 //Se o numero for zero ela retorna 0
-var _sigin = sign(-388);//pode usar essa função para ver se o numero é positivo, negativo ou zero
+//var _sigin = sign(-388);//pode usar essa função para ver se o numero é positivo, negativo ou zero
 
 //show_message(_sigin);
 
@@ -63,8 +67,14 @@ var _sigin = sign(-388);//pode usar essa função para ver se o numero é positi
 //Se o valor estiver dentro do intervalo ele retorna o valor
 
 //
-var _clamp = clamp(5,0,10);
-show_message(_clamp);
+//var _clamp = clamp(5,0,10);
+//show_message(_clamp);
+
+//LERP - Retorna a porcentagem de diferença entre dois valores
+//var _lerp = (0,10,.5);
+//show_message(_lerp);
+
+
 
 #endregion
 
@@ -110,6 +120,17 @@ exibe_jogo_tempo = function()
 	draw_set_valign(-1);
 	
 	
+}
+
+move_coiso = function()
+{
+	if(mouse_check_button(mb_left))	
+	{
+		//Colocando o coiso na osição do mouse
+		x = lerp(x,mouse_x, 0.1);//Estou aproximando meu valor x do x do mouse de 10% em 10%
+		y = lerp(y,mouse_y, 0.1);//Estou aproximando meu valor y do y do mouse de 10% em 10%
+		
+	}
 }
 
 #endregion

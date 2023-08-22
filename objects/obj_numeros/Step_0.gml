@@ -13,7 +13,10 @@ _down  = keyboard_check(vk_down) or keyboard_check(ord("S"));
 //Movendo usando velh e velv
 //Quando eu for pra esquerda a direita fica com valor 0
 //Exemplo (1 - 0) * 5 = 5 indo pra direita || (0 - 1) * 5 = -5; indo pra esquerda
-velh += (_rigth - _left) * acel;
+//velh += (_rigth - _left) * acel;
+
+//Acelerando meu velh usando lerp
+velh = lerp(velh, (_rigth - _left) * max_velh, acel);
 
 velv += (_down - _up) * acel;
 
@@ -24,6 +27,31 @@ velv = clamp(velv,-max_velv,max_velv);//impedi que velv tenha outro valor maior 
 //Se o velh for maior do que -max_velh ou max_velh, ele vai ficar dentro desse limite
 x += clamp(velh,-max_velh,max_velh);//1º forma de usar o clump
 y += velv;
+
+//Quando eu estiver me movendo na horizontal ele vai aproximar a saturação de 255
+//Quando eu nao estiver me movendo na horizontal ele vai aproximar a saturação de 0
+//Usando o lerp e checando se ele esta se movendo na horizontal
+//aplicando a cor
+image_blend = make_color_hsv(0,satura,255);
+//Checando se eu estou apertando uma das direções
+if(_rigth + _left != 0)
+{
+	satura = lerp(satura, 255,0.1);	
+}
+else//Nao estou me movendo para horizontal
+{
+	satura = lerp(satura,0,0.01);
+}
+
+//Quando eu nao estiver apertando nem rigth e nem left o velh vai se aproximar do 0
+//Use lerp para fazer isso
+//Checando se eu não estou apertando rigth e nem left
+if(!_rigth && !_left)
+{
+	velh = lerp(velh, 0,0.1);
+}
+
+move_coiso();
 
 //Diminuindo o tempo de pouco em pocuo
 //Fazer diminuir a cada segundo
