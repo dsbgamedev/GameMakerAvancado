@@ -74,7 +74,10 @@ dias     = 0; //Horas divididas por  24
 //var _lerp = (0,10,.5);
 //show_message(_lerp);
 
-
+//SIN e COS - seno e cosseno
+//sin para eixo y e cos para o eixo x, ambos retorno valor entre -1 e 1
+var _sin = sin(33);
+show_message(_sin);
 
 #endregion
 
