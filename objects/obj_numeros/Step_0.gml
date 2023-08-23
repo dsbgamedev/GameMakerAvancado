@@ -86,3 +86,4 @@ x = clamp(x,0 + sprite_width / 2, room_width - sprite_width / 2) ;
 show_debug_message(room_width);
 //Façam ele ficar dentro da room no eixo Y
 y = clamp(y,sprite_height, room_height);
+

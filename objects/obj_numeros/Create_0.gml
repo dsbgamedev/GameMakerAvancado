@@ -45,6 +45,7 @@ tempo = 0;
 - Minutos vai guardar quantos minutos passaram
 - Horas vai guardar quantas horas passaram
 */
+
 segundos = 0;  //get_time divididos por 1 milhao, segundo chegou em 60 ele vai para 0
 minutos  = 0; //Segundos divididos por 60, minutos chegou em 60 ele vai para 0
 horas    = 0; //Minutos divididos por 60, horas chegou em 24 vai para 0
@@ -76,8 +77,10 @@ dias     = 0; //Horas divididas por  24
 
 //SIN e COS - seno e cosseno
 //sin para eixo y e cos para o eixo x, ambos retorno valor entre -1 e 1
-var _sin = sin(33);
-show_message(_sin);
+//var _sin = sin(33);
+//show_message(_sin);
+testao = 0;
+
 
 #endregion
 
@@ -134,6 +137,20 @@ move_coiso = function()
 		y = lerp(y,mouse_y, 0.1);//Estou aproximando meu valor y do y do mouse de 10% em 10%
 		
 	}
+}
+
+teste_draw = function()
+{
+	//Calculando a distancia do X
+//pi / 180 é a conversão para o circulo
+var _conv = pi / 180;
+var _distx = cos(_conv * testao * 2) * 100;/*(_conv * testao * 2) * 100 ;**/
+var _disty = sin(_conv * testao * 2) * 100;
+
+//Desenhando um sprite para girar ao redor do coiso
+draw_sprite(spr_moeda, 0 , x + _distx, y + _disty);
+
+	
 }
 
 #endregion

@@ -17,7 +17,9 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
-    {"name":"obj_step","order":1,"path":"objects/obj_step/obj_step.yy",},
+    {"name":"obj_moeda","order":1,"path":"objects/obj_moeda/obj_moeda.yy",},
+    {"name":"obj_tiro","order":2,"path":"objects/obj_tiro/obj_tiro.yy",},
+    {"name":"spr_tiro","order":2,"path":"sprites/spr_tiro/spr_tiro.yy",},
     {"name":"spr_moeda","order":1,"path":"sprites/spr_moeda/spr_moeda.yy",},
     {"name":"Note2","order":1,"path":"notes/Note2/Note2.yy",},
   ],
