@@ -10,11 +10,49 @@ _left  = max(keyboard_check(ord("A")), keyboard_check(vk_left));
 _up  = keyboard_check(ord("W")) or keyboard_check(vk_up)//Jeito que o professor faz.
 _down  = keyboard_check(vk_down) or keyboard_check(ord("S"));
 
+
+//Movendo usando o teclado
+//Checando se eu estou apaertando alguma tecla
+//So ativar se eu apertei o up ou o down
+//Mas nao se eu apertei o up e o down juntos
+//Usando o XOR 
+if(_up xor _down or _left or _rigth)
+{
+	var _dir = point_direction(0,0,(_rigth - _left),(_down - _up));
+	x += lengthdir_x(vel,_dir);
+	y += lengthdir_y(vel,_dir);
+}
+//Checando se o mouse clicou
+var _mouse_click = mouse_check_button(mb_left);
+
+if(_mouse_click)
+{
+	//Fazer ele se mover no eixo X e Y com bas na direção do mouse com base na velocidade dele
+	//Usando a velocidade dele
+	//Pegando a direção do mouse em relação ao coiso
+	var _dir  = point_direction(x,y,mouse_x, mouse_y);
+	
+	//Definindo a velocidade no eixo X dele
+	var _velh = lengthdir_x(vel, _dir);//Achando a velocidade horizontal
+	//Definindo a velocidade no eixo Y dele
+	var _velv = lengthdir_y(vel, _dir);//Achando a velocidade vertical
+	
+	//show_debug_message(_velh);
+	
+	//Mover ele
+	x += _velh;	
+	y += _velv;	
+}
+
+
 //Movendo usando velh e velv
 //Quando eu for pra esquerda a direita fica com valor 0
 //Exemplo (1 - 0) * 5 = 5 indo pra direita || (0 - 1) * 5 = -5; indo pra esquerda
 //velh += (_rigth - _left) * acel;
 
+
+
+/*
 //Acelerando meu velh usando lerp
 velh = lerp(velh, (_rigth - _left) * max_velh, acel);
 

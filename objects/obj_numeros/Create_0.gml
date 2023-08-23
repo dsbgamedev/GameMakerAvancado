@@ -8,6 +8,7 @@ max_velh =  3;
 max_velv =  3;
 acel     = .01;
 satura   = 0;
+vel      = 5;
 
 
 #endregion
