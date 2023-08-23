@@ -10,7 +10,6 @@ acel     = .01;
 satura   = 0;
 
 
-
 #endregion
 
 #region explicações
@@ -81,10 +80,18 @@ dias     = 0; //Horas divididas por  24
 //show_message(_sin);
 testao = 0;
 
+//lenghtdir x trata do eixo X
+//lenghtdir y trata do eixo Y
+//Qual e a distancia que eu tenho que estar no meu eixo x
+//Se a distancia for 100 e o meu angulo é zero
+//show_message(lengthdir_x(100,90));
+
+dir = 0;
 
 #endregion
 
 #region funções
+
 exibe_tempo = function()
 {
 	//Centralizando meu texto
@@ -139,25 +146,4 @@ move_coiso = function()
 	}
 }
 
-teste_draw = function()
-{
-	//Calculando a distancia do X
-//pi / 180 é a conversão para o circulo
-var _conv = pi / 180;
-var _distx = cos(_conv * testao * 2) * 100;/*(_conv * testao * 2) * 100 ;**/
-var _disty = sin(_conv * testao * 2) * 100;
-
-//Desenhando um sprite para girar ao redor do coiso
-draw_sprite(spr_moeda, 0 , x + _distx, y + _disty);
-
-	
-}
-
 #endregion
-
-
-
-
-
-
-

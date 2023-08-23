@@ -16,7 +16,7 @@ var _fire = mouse_check_button_released(mb_right);
 if(_fire)
 {
 	//Criando o tiro
-	var _tiro = instance_create_layer(mouse_x,mouse_y,"Instances",obj_tiro);
+	instance_create_depth(mouse_x,mouse_y,depth,obj_tiro);
 }
 
 
