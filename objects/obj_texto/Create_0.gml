@@ -30,15 +30,22 @@ desenha_texto = function(_texto)
 	
 	draw_set_halign(0);
 	draw_set_valign(0);
-
+	
+	//Mudando a fonte (teste)
+	draw_set_font(fnt_texto);
+	
+	//Pegando a altura da fonte EU ainda não mudei a fonte
+	var _txt_alt = string_height(_texto);
+	
 	//Desenhando o meu texto
-	draw_text_ext(_x1, _y1,_texto, 15,_larg);
-
+	draw_text_ext(_x1 + _marg, _y1 + _marg,_texto, _txt_alt,_larg - _marg);
+	
+	//Resetando
 	draw_set_halign(-1);
 	draw_set_valign(-1);
+	draw_set_font(-1);
 
 }
-
 
 #endregion
 
