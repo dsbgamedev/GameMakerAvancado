@@ -6,6 +6,7 @@
 
 texto  =  "Teste novo kkkkkk MeuTexto é muito bancana show de bola!!";
 texto2 =  "\nCachorro quente bem gostoso !!!!!!";
+cont   = 1;
 
 #endregion
 
@@ -13,12 +14,27 @@ texto2 =  "\nCachorro quente bem gostoso !!!!!!";
 
 desenha_texto = function(_texto)
 {
+	//Se a pessoa estiver segurando SPAÇO o texto escreve mais rapido
+	var _vel = keyboard_check(vk_space) ? 1 : .1;
+	//Fazer com que SE a pessoa apertou enter, então ele escreve o texto inteiro de uma vez
+	if(keyboard_check_released(vk_enter))
+	{
+		//Fazendo o cont ser do tamanho do texto
+		cont = string_length(_texto);//retorna largura da nossa string em caracteres
+	}
 	
+	//Aumentando o valor dele se ele for menor que o texto
+	if(cont < string_length(_texto)) cont += _vel;
+	//show_debug_message(cont);
+	
+	cont += _vel;
 	draw_set_halign(0);
 	draw_set_valign(0);
 	
 	//Mudando a fonte (teste)
 	draw_set_font(fnt_texto);
+	//Definindo o meu texo
+	var _meu_texto = string_copy(_texto, 1, cont);	
 	
 	//Iniciando variaveis
 	var _x1,_y1,_x2,_y2, _larg = 400, _alt = 50, _marg = 4;
@@ -27,11 +43,13 @@ desenha_texto = function(_texto)
 	//Pois cria espaçamento entre linhas use no caso por exemplo uma string "A"
 	var _txt_alt = string_height("A");
 	//Checando se eu preciso aumentar o tamanho da caixa (_alt)
-	_alt = string_height_ext(_texto,_txt_alt, _larg - _marg);
+	_alt = string_height_ext(_meu_texto,_txt_alt, _larg - _marg);
 	_x1 = room_width / 2  - _larg / 2;
 	_y1 = room_height / 2 - _alt / 2;
 	_x2 = _x1 + _larg;
 	_y2 = _y1 + _alt;
+	
+	
 
 	//Desenhando a borda da caixa de texto
 	//Ela deve ser 2 pixel maior que a caixa de texto 
@@ -41,7 +59,7 @@ desenha_texto = function(_texto)
 	draw_rectangle_color(_x1,_y1,_x2,_y2, c_dkgray,c_dkgray,c_dkgray,c_dkgray,false);
 	
 	//Desenhando o meu texto
-	draw_text_ext(_x1 + _marg, _y1 + _marg,_texto, _txt_alt,_larg - _marg);
+	draw_text_ext(_x1 + _marg, _y1 + _marg,_meu_texto, _txt_alt,_larg - _marg);
 	
 	//Resetando
 	draw_set_halign(-1);
