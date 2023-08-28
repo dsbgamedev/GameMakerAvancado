@@ -37,6 +37,7 @@
     {"id":{"name":"obj_moeda","path":"objects/obj_moeda/obj_moeda.yy",},},
     {"id":{"name":"obj_tiro","path":"objects/obj_tiro/obj_tiro.yy",},},
     {"id":{"name":"fnt_texto","path":"fonts/fnt_texto/fnt_texto.yy",},},
+    {"id":{"name":"fnt_titulo","path":"fonts/fnt_titulo/fnt_titulo.yy",},},
     {"id":{"name":"obj_texto","path":"objects/obj_texto/obj_texto.yy",},},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"obj_triangle","path":"objects/obj_triangle/obj_triangle.yy",},},

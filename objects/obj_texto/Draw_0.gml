@@ -3,6 +3,6 @@
 
 
 
-desenha_texto(texto + texto2 );//concatenação para juntar string | texto + texto2 + keyboard_string |
+//desenha_texto(texto + texto2 );//concatenação para juntar string | texto + texto2 + keyboard_string |
 
-
+desenha_titulo_animado("MEU GRANDE JOGO!");

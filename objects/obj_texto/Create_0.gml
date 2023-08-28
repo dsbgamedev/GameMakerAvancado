@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 
+//Fazer com que o texto fique centralizado na caixa de texto
+
 #region variaveis
 
 texto  =  "Teste novo kkkkkk MeuTexto é muito bancana show de bola!!";
@@ -11,6 +13,28 @@ cont   = 1;
 #endregion
 
 #region metodos
+
+///@function alinha_texto(horizontal,vertical);
+alinha_texto = function(_hor, _ver)
+{
+	draw_set_halign(_hor);
+	draw_set_valign(_ver);
+}
+
+desenha_titulo_animado = function(_texto)
+{
+	//Definindo a fonte
+	draw_set_font(fnt_titulo);
+	//Centralizar o texto
+	alinha_texto(1,1);
+	
+	draw_text(room_width / 2, 100, _texto);
+	
+	//Resetando o alinhamento e font
+	alinha_texto(-1,-1);
+	draw_set_font(-1);
+	
+}
 
 desenha_texto = function(_texto)
 {
