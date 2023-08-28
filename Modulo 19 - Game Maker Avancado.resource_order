@@ -22,8 +22,10 @@
     {"name":"fnt_titulo","order":1,"path":"fonts/fnt_titulo/fnt_titulo.yy",},
     {"name":"obj_texto","order":4,"path":"objects/obj_texto/obj_texto.yy",},
     {"name":"obj_triangle","order":3,"path":"objects/obj_triangle/obj_triangle.yy",},
+    {"name":"spr_cor","order":3,"path":"sprites/spr_cor/spr_cor.yy",},
     {"name":"spr_tiro","order":2,"path":"sprites/spr_tiro/spr_tiro.yy",},
     {"name":"spr_moeda","order":1,"path":"sprites/spr_moeda/spr_moeda.yy",},
     {"name":"Note2","order":1,"path":"notes/Note2/Note2.yy",},
+    {"name":"obj_cor","order":5,"path":"objects/obj_cor/obj_cor.yy",},
   ],
 }

@@ -32,7 +32,7 @@ desenha_titulo_animado = function(_texto)
 	
 	var _x1,_y1, _ang, _cor, _alpha;
 	_x1		= room_width / 2 + (18 * sin(2 * _temp));
-	_y1		= 100 + (10 * sin(3 * _temp));
+	_y1		= 100 + (13 * sin(3 * _temp));
 	_ang	= 0 + (10 * sin(1.5 * _temp));
 	_cor	= c_fuchsia;
 	_alpha	= abs(sin(0.8 * _temp));
@@ -42,10 +42,10 @@ desenha_titulo_animado = function(_texto)
 	//Alterando valores
 	_temp += .2;
 	_x1		= room_width / 2 + (18 * sin(2 * _temp));
-	_y1		= 100 + (10 * sin(3 * _temp));
+	_y1		= 100 + (13 * sin(3 * _temp));
 	_ang	= 0 + (10 * sin(1.5 * _temp));
 	_alpha	= 1;
-	_cor = c_yellow;
+	_cor	= make_color_hsv(255 * sin(0.1 * _temp), 255, 255);//mudar cor com bas no tempo
 	
 	//Desenhando a parte de frente do texto
 	draw_text_transformed_color(_x1, _y1, _texto, 1, 1, _ang,_cor, _cor,_cor,_cor, _alpha);
