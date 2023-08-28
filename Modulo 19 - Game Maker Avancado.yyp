@@ -46,6 +46,7 @@
     {"id":{"name":"spr_tiro","path":"sprites/spr_tiro/spr_tiro.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_moeda","path":"sprites/spr_moeda/spr_moeda.yy",},},
+    {"id":{"name":"sq_teste","path":"sequences/sq_teste/sq_teste.yy",},},
     {"id":{"name":"Note2","path":"notes/Note2/Note2.yy",},},
     {"id":{"name":"obj_numeros","path":"objects/obj_numeros/obj_numeros.yy",},},
     {"id":{"name":"obj_cor","path":"objects/obj_cor/obj_cor.yy",},},
