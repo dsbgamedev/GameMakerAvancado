@@ -17,6 +17,7 @@ meses = ds_list_create();
 ds_list_add(meses,"Janeiro", "Fevereiro", "Março", "Abril",
 			"Maio", "Junho", "Agosto", "Setembro", "Outubro",
 			"Novembro", "Dezembro");
+indice = 0;
 
 //show_message(ds_list_find_index(meses, "Fevereiro"));//Passando a lista
 
