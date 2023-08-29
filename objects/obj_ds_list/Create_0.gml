@@ -14,13 +14,16 @@
 meses = ds_list_create();
 
 //Preenchendo a minha lista
-ds_list_add(meses,"Janeiro", "Fevereiro");
+ds_list_add(meses,"Janeiro", "Fevereiro", "Março", "Abril",
+			"Maio", "Junho", "Agosto", "Setembro", "Outubro",
+			"Novembro", "Dezembro");
 
 //show_message(ds_list_find_index(meses, "Fevereiro"));//Passando a lista
 
-show_message(ds_list_find_value(meses, 1));//passando a lista por posição
+//show_message(ds_list_find_value(meses, 1));//passando a lista por posição
 
-
+//Acessando o mes de fevereiro
+//show_message(meses[| 1]);
 
 
 
