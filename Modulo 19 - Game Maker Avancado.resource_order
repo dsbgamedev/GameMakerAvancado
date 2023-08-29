@@ -32,6 +32,7 @@
     {"name":"obj_seq","order":6,"path":"objects/obj_seq/obj_seq.yy",},
     {"name":"Note2","order":1,"path":"notes/Note2/Note2.yy",},
     {"name":"obj_cor","order":5,"path":"objects/obj_cor/obj_cor.yy",},
+    {"name":"obj_ds_outro","order":10,"path":"objects/obj_ds_outro/obj_ds_outro.yy",},
     {"name":"obj_teste","order":8,"path":"objects/obj_teste/obj_teste.yy",},
   ],
 }

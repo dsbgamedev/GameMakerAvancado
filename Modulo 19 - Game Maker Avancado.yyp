@@ -56,6 +56,7 @@
     {"id":{"name":"Note2","path":"notes/Note2/Note2.yy",},},
     {"id":{"name":"obj_numeros","path":"objects/obj_numeros/obj_numeros.yy",},},
     {"id":{"name":"obj_cor","path":"objects/obj_cor/obj_cor.yy",},},
+    {"id":{"name":"obj_ds_outro","path":"objects/obj_ds_outro/obj_ds_outro.yy",},},
     {"id":{"name":"obj_teste","path":"objects/obj_teste/obj_teste.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
