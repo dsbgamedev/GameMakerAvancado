@@ -18,6 +18,21 @@ ds_stack_push(pilha, "Cachorro", "Gato", "Pato", "Minhoca");
 
 ds_list_add(lista, "Cachorro", "Gato", "Pato", "Minhoca");
 
+//Tirando o item da pilha sempre que eu apertar enter
+//E fazendo este item da pilha, também sair da ds_list
+remove = function()
+{
+			//Checando se eu apertei o enter
+	if(keyboard_check_released(vk_enter))
+	{
+		//show_message(ds_stack_pop(pilha));
+		var _item = ds_stack_pop(pilha);
+		//Removendo esse cara da minha ds_list
+		var _pos = ds_list_find_index(lista, _item);
+		//Deletando ele da lista
+		ds_list_delete(lista, _pos);	
+	}
+}
 
 
 
