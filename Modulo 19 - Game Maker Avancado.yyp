@@ -50,6 +50,7 @@
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"obj_ds_list","path":"objects/obj_ds_list/obj_ds_list.yy",},},
     {"id":{"name":"spr_moeda","path":"sprites/spr_moeda/spr_moeda.yy",},},
+    {"id":{"name":"obj_acao","path":"objects/obj_acao/obj_acao.yy",},},
     {"id":{"name":"spr_teste","path":"sprites/spr_teste/spr_teste.yy",},},
     {"id":{"name":"sq_teste","path":"sequences/sq_teste/sq_teste.yy",},},
     {"id":{"name":"obj_seq","path":"objects/obj_seq/obj_seq.yy",},},

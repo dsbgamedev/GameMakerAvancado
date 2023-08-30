@@ -14,15 +14,15 @@ pilha = ds_stack_create();
 lista =  ds_list_create();
 
 //Para adicionar informações em uma pilha, nos usamos o push
-ds_stack_push(pilha, "Cachorro", "Gato", "Pato", "Minhoca");
+//ds_stack_push(pilha, "Cachorro", "Gato", "Pato", "Minhoca");
 
-ds_list_add(lista, "Cachorro", "Gato", "Pato", "Minhoca");
+//ds_list_add(lista, "Cachorro", "Gato", "Pato", "Minhoca");
 
 //Tirando o item da pilha sempre que eu apertar enter
 //E fazendo este item da pilha, também sair da ds_list
 remove = function()
 {
-			//Checando se eu apertei o enter
+	//Checando se eu apertei o enter
 	if(keyboard_check_released(vk_enter))
 	{
 		//show_message(ds_stack_pop(pilha));
@@ -34,7 +34,13 @@ remove = function()
 	}
 }
 
-
+//Função de movimento
+move_dir = function(_dir)
+{
+	//Movendo com base na direção
+	x += lengthdir_x(64, _dir);
+	y += lengthdir_y(64, _dir);
+}
 
 
 

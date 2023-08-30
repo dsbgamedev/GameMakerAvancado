@@ -28,6 +28,7 @@
     {"name":"spr_tiro","order":2,"path":"sprites/spr_tiro/spr_tiro.yy",},
     {"name":"obj_ds_list","order":9,"path":"objects/obj_ds_list/obj_ds_list.yy",},
     {"name":"spr_moeda","order":1,"path":"sprites/spr_moeda/spr_moeda.yy",},
+    {"name":"obj_acao","order":11,"path":"objects/obj_acao/obj_acao.yy",},
     {"name":"spr_teste","order":4,"path":"sprites/spr_teste/spr_teste.yy",},
     {"name":"obj_seq","order":6,"path":"objects/obj_seq/obj_seq.yy",},
     {"name":"Note2","order":1,"path":"notes/Note2/Note2.yy",},
