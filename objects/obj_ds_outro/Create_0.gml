@@ -13,7 +13,7 @@ pilha = ds_stack_create();
 
 lista =  ds_list_create();
 
-//Fazer ele executar o ultimo comando ao apertar enter
+
 
 //Para adicionar informações em uma pilha, nos usamos o push
 //ds_stack_push(pilha, "Cachorro", "Gato", "Pato", "Minhoca");

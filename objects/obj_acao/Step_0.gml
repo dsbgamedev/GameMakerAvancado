@@ -19,7 +19,7 @@ if(_mouse_sobre)
 			case "Direita":  _dir = 0; break;
 			case "Esquerda": _dir = 180; break;
 			case "Cima":     _dir = 90; break;
-			case "baixo":    _dir = 270; break;
+			case "Baixo":    _dir = 270; break;
 					
 	  }
 	  //Executando a acao de salvar a dierecao na pilha do ds_outro
