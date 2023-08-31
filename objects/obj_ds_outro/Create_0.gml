@@ -13,6 +13,8 @@ pilha = ds_stack_create();
 
 lista =  ds_list_create();
 
+//Fazer ele executar o ultimo comando ao apertar enter
+
 //Para adicionar informações em uma pilha, nos usamos o push
 //ds_stack_push(pilha, "Cachorro", "Gato", "Pato", "Minhoca");
 
@@ -41,6 +43,16 @@ move_dir = function(_dir)
 	x += lengthdir_x(64, _dir);
 	y += lengthdir_y(64, _dir);
 }
+
+//Adiciona na lista alguma coisa
+///@function adiciona_pilha(Item a ser adicionado)
+ adiciona_pilha = function(_coisa, _texto)
+{
+	//Salvando a in formaçao em uma lista para eu poder ver
+	ds_list_add(lista, _texto);
+	ds_stack_push(pilha, _coisa);
+}
+
 
 
 
