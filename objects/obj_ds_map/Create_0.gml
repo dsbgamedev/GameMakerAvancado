@@ -27,6 +27,18 @@ mapa[? "foto"]   = spr_player;
 
 show_message(ds_map_find_value(mapa, "nome"));
 
+//Desenhe na tela o nome, idade, status e level do personagem
+//Crie um meto de desenhar dados
+
+desenha_dados = function()
+{
+
+
+}
+
+
+
+
 
 
 
