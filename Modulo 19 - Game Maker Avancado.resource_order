@@ -24,6 +24,7 @@
     {"name":"obj_texto","order":4,"path":"objects/obj_texto/obj_texto.yy",},
     {"name":"obj_variavel","order":7,"path":"objects/obj_variavel/obj_variavel.yy",},
     {"name":"obj_triangle","order":3,"path":"objects/obj_triangle/obj_triangle.yy",},
+    {"name":"obj_ds_map","order":12,"path":"objects/obj_ds_map/obj_ds_map.yy",},
     {"name":"spr_cor","order":3,"path":"sprites/spr_cor/spr_cor.yy",},
     {"name":"spr_tiro","order":2,"path":"sprites/spr_tiro/spr_tiro.yy",},
     {"name":"obj_ds_list","order":9,"path":"objects/obj_ds_list/obj_ds_list.yy",},
