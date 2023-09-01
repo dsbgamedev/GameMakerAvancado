@@ -11,6 +11,14 @@
 //Criando a minha pilha
 pilha = ds_stack_create();
 
+//Criando a minha fila
+fila = ds_queue_create();
+
+//Adiciona item
+//ds_queue_enqueue();
+//ds_queue_dequeue();
+
+
 lista =  ds_list_create();
 
 
@@ -36,7 +44,20 @@ remove = function()
 	}
 }
 
+
 //Função de movimento
+///@function adiciona_fila(Item a ser adicionado, texto)
+adiciona_fila = function(_dir, _texto)
+{
+
+	//Salvando as informações em um alista, para eu poder ver
+	ds_queue_enqueue(fila, _dir);
+	//Salvando a informação na minha lista
+	ds_list_add(lista, _texto);
+	
+
+}
+
 move_dir = function(_dir)
 {
 	//Movendo com base na direção

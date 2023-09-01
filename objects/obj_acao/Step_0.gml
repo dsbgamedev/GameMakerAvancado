@@ -25,7 +25,8 @@ if(_mouse_sobre)
 	  //Executando a acao de salvar a dierecao na pilha do ds_outro
 	  with(obj_ds_outro)
 	  {
-	     adiciona_pilha(_dir, other.direcao);
+	     //adiciona_pilha(_dir, other.direcao);
+		 adiciona_fila(_dir, other.direcao);
 	  }
 	}
 }
