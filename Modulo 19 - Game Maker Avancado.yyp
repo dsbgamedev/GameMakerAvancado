@@ -40,6 +40,7 @@
     {"id":{"name":"fnt_texto","path":"fonts/fnt_texto/fnt_texto.yy",},},
     {"id":{"name":"fnt_titulo","path":"fonts/fnt_titulo/fnt_titulo.yy",},},
     {"id":{"name":"obj_texto","path":"objects/obj_texto/obj_texto.yy",},},
+    {"id":{"name":"spr_moldura","path":"sprites/spr_moldura/spr_moldura.yy",},},
     {"id":{"name":"Inicializar","path":"scripts/Inicializar/Inicializar.yy",},},
     {"id":{"name":"obj_variavel","path":"objects/obj_variavel/obj_variavel.yy",},},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},

@@ -22,6 +22,7 @@
     {"name":"obj_tiro","order":2,"path":"objects/obj_tiro/obj_tiro.yy",},
     {"name":"fnt_titulo","order":1,"path":"fonts/fnt_titulo/fnt_titulo.yy",},
     {"name":"obj_texto","order":4,"path":"objects/obj_texto/obj_texto.yy",},
+    {"name":"spr_moldura","order":6,"path":"sprites/spr_moldura/spr_moldura.yy",},
     {"name":"obj_variavel","order":7,"path":"objects/obj_variavel/obj_variavel.yy",},
     {"name":"obj_triangle","order":3,"path":"objects/obj_triangle/obj_triangle.yy",},
     {"name":"obj_ds_map","order":12,"path":"objects/obj_ds_map/obj_ds_map.yy",},
