@@ -25,15 +25,42 @@ mapa[? "level"]  = 1;
 //Foto
 mapa[? "foto"]   = spr_player;
 
-show_message(ds_map_find_value(mapa, "nome"));
+//show_message(ds_map_find_value(mapa, "nome"));
 
 //Desenhe na tela o nome, idade, status e level do personagem
 //Crie um meto de desenhar dados
 
-desenha_dados = function()
+///@method desenha_dados(mapa)
+desenha_dados = function(_mapa)
 {
-
-
+	#region dados do mapa
+	//Pegando as informações do mapa
+	var _nome    = _mapa[? "nome"];
+	var _idade   = _mapa[? "idade"];
+	var _status  = _mapa[? "status"];
+	var _level   = _mapa[? "level"];
+	var _foto    = _mapa[? "foto"];
+	
+	#endregion Variaveis de desenho
+	
+	#region Variaveis de desenho
+	//Variaveis de desenho
+	var _x1 = room_width / 2;
+	var _y1 = room_height / 2;
+	
+	//Altura do texto, para poder pular linha
+	var _txt_alt  = string_height(_nome);
+	#endregion
+	
+	//Desenhando o texto
+	draw_text(_x1, _y1,"Nome: " + _nome);
+	//Idade
+	draw_text(_x1, _y1  + _txt_alt * 1, "Idade: " + string(_idade));
+	//Status
+	draw_text(_x1, _y1  + _txt_alt * 2, "Status: " +_status);
+	//Level
+	draw_text(_x1, _y1  + _txt_alt * 3, "Level: " + string(_level));
+	
 }
 
 
