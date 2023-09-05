@@ -45,21 +45,30 @@ desenha_dados = function(_mapa)
 	
 	#region Variaveis de desenho
 	//Variaveis de desenho
-	var _larg   = 400;
+	var _larg   = 300;
 	var _alt    = 200;
 	var _xscale = _larg / sprite_get_width(spr_moldura);//achando a escala do retangulo
 	var _yscale = _alt / sprite_get_height(spr_moldura);
 	var _x1     = room_width / 2;
 	var _y1     = room_height / 2;
+	var _marg_x = 7 + sprite_get_width(spr_player); //7 Pixel + a sprite
 	
 	//Altura do texto, para poder pular linha
 	var _txt_alt  = string_height(_nome);
+	var _marg_y = _txt_alt  +7; //7 Pixel + a sprite
 	#endregion
+	
+
+	//Desenhando a minha moldura
+	draw_sprite_ext(spr_moldura, 0, _x1, _y1,_xscale,_yscale,  0, c_white,1);
+	
+	//Ajustando a posição inicial do texto
+	_x1 = room_width / 2 - _larg / 2 + _marg_x;
+	_y1 = room_height / 2 - _alt / 2 + _marg_y;
 	//Alinhando o texto
 	draw_set_valign(1);
+	
 	//Desenhando o texto
-	//Desenhando a minha moldura
-	draw_sprite_ext(spr_moldura,0, _x1, _y1,_xscale,_yscale,  0, c_white,1);
 	
 	draw_text(_x1, _y1,"Nome: " + _nome);
 	//Idade
