@@ -27,6 +27,17 @@ mapa[? "foto"]   = spr_player;
 
 //show_message(ds_map_find_value(mapa, "nome"));
 
+personagem2 = ds_map_create();
+personagem2 [? "nome"]   = "Juca";
+personagem2 [? "idade"]  = 14;
+personagem2 [? "status"] = "Doente";
+personagem2 [? "level"]  = 3;
+personagem2 [? "foto"]   = spr_player;
+
+
+pos_x = 0;
+pos_y = 0;
+
 //Desenhe na tela o nome, idade, status e level do personagem
 //Crie um meto de desenhar dados
 
@@ -45,12 +56,14 @@ desenha_dados = function(_mapa)
 	
 	#region Variaveis de desenho
 	//Variaveis de desenho
-	var _larg   = 300;
-	var _alt    = 200;
+	var _larg   = 250;
+	var _alt    = 120;
+	var _xx		= pos_x; /* room_width / 2;*/
+	var _yy		= pos_y;  /*room_height / 2;*/
 	var _xscale = _larg / sprite_get_width(spr_moldura);//achando a escala do retangulo
 	var _yscale = _alt / sprite_get_height(spr_moldura);
-	var _x1     = room_width / 2;
-	var _y1     = room_height / 2;
+	var _x1     = _xx;
+	var _y1     = _yy;
 	var _marg_x = 7 + sprite_get_width(spr_player); //7 Pixel + a sprite
 	
 	//Altura do texto, para poder pular linha
@@ -63,13 +76,17 @@ desenha_dados = function(_mapa)
 	draw_sprite_ext(spr_moldura, 0, _x1, _y1,_xscale,_yscale,  0, c_white,1);
 	
 	//Ajustando a posição inicial do texto
-	_x1 = room_width / 2 - _larg / 2 + _marg_x;
-	_y1 = room_height / 2 - _alt / 2 + _marg_y;
+	_x1 = _xx - _larg / 2 + _marg_x;
+	_y1 = _yy - _alt / 2 + _marg_y;
+	
+	//Desenhando a sprite
+	var _spr_w = sprite_get_width(_foto);
+	var _spr_h = sprite_get_width(_foto);
+	draw_sprite_ext(_foto, 0, _x1 - _spr_w / 2 , _y1 + 10 + _spr_h / 2, -1, 1 ,0, c_white, 1);
+	
 	//Alinhando o texto
 	draw_set_valign(1);
-	
 	//Desenhando o texto
-	
 	draw_text(_x1, _y1,"Nome: " + _nome);
 	//Idade
 	draw_text(_x1, _y1  + _txt_alt * 1, "Idade: " + string(_idade));
