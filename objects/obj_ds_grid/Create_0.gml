@@ -70,6 +70,17 @@ desenha_gride = function(_gride)
 			//Se o mouse x for igual coluna, && mouse y for igual a linha então eu mudo a cor
 			if(_mouse_x == i && _mouse_y == j ) _cor = c_orange;
 			
+			//Mudando a cor no intervalo do X
+			//Se o i estiver dentro desse intervalo retorna true, se nao false
+			var _intervalo_i = i == clamp(i, posicoes[? "x1"], _mouse_x);
+		
+			if(_intervalo_i)
+			{
+				//Mudando a cor no intervalo X w do Y
+				if(mouse_check_button(mb_left))  _cor = c_orange;
+				if(mouse_check_button(mb_right)) _cor = c_red;
+				
+			}
 			
 			draw_rectangle_color(_x1,_y1,_x2,_y2,_cor,_cor,_cor,_cor ,false);
 			draw_rectangle_color(_x1,_y1,_x2,_y2,c_black,c_black,c_black,c_black ,true);
