@@ -11,6 +11,12 @@ lins = room_height div size;
 //Descobrinco quantas colunas e linhas eu tenho que ter
 gride = ds_grid_create(cols, lins);
 
+posicoes = ds_map_create();
+posicoes[? "x1"] = 0;
+posicoes[? "y1"] = 0;
+posicoes[? "x2"] = 0;
+posicoes[? "y2"] = 0;
+
 //Ao preencher a minha grid eu vou "limpar" ela
 ds_grid_clear(gride,0);
 
@@ -81,6 +87,29 @@ desenha_gride = function(_gride)
 			draw_set_valign(-1);			
 		}	
 	}
+}
+
+//Funcao de selecao
+seleciona_gride = function()
+{
+	var _mouse_x = mouse_x div size;
+	var _mouse_y = mouse_y div size;
+	//Checando se o mouse clicou	
+	if(mouse_check_button_pressed(mb_left))
+	{
+		//Definindo a posição inicial
+		posicoes[? "x1"] = _mouse_x; 
+		posicoes[? "y1"] = _mouse_y; 
+	}
+	
+	//Checando a posição final
+	if(mouse_check_button_pressed(mb_left))
+	{
+		//Definindo a posição fnicial
+		posicoes[? "x2"] = _mouse_x; 
+		posicoes[? "y2"] = _mouse_y; 
+	}
+	
 }
 
 //Preenchendo a gride
