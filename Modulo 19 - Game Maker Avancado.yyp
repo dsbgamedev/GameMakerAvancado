@@ -31,11 +31,12 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.0.98",
+    "IDEVersion": "2023.8.1.102",
   },
   "resources": [
     {"id":{"name":"obj_moeda","path":"objects/obj_moeda/obj_moeda.yy",},},
     {"id":{"name":"spr_mascara","path":"sprites/spr_mascara/spr_mascara.yy",},},
+    {"id":{"name":"obj_struct","path":"objects/obj_struct/obj_struct.yy",},},
     {"id":{"name":"obj_tiro","path":"objects/obj_tiro/obj_tiro.yy",},},
     {"id":{"name":"obj_ds_grid","path":"objects/obj_ds_grid/obj_ds_grid.yy",},},
     {"id":{"name":"fnt_texto","path":"fonts/fnt_texto/fnt_texto.yy",},},

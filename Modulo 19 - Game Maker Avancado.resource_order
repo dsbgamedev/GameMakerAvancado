@@ -19,6 +19,7 @@
   "ResourceOrderSettings": [
     {"name":"obj_moeda","order":1,"path":"objects/obj_moeda/obj_moeda.yy",},
     {"name":"spr_mascara","order":5,"path":"sprites/spr_mascara/spr_mascara.yy",},
+    {"name":"obj_struct","order":14,"path":"objects/obj_struct/obj_struct.yy",},
     {"name":"obj_tiro","order":2,"path":"objects/obj_tiro/obj_tiro.yy",},
     {"name":"obj_ds_grid","order":13,"path":"objects/obj_ds_grid/obj_ds_grid.yy",},
     {"name":"fnt_titulo","order":1,"path":"fonts/fnt_titulo/fnt_titulo.yy",},
