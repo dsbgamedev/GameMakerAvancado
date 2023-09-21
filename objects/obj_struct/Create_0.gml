@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 //Contrutor
+#region construtor
 
 cria_personagem = function(_nome, _idade, _status, _level, _foto) constructor
 {
@@ -71,7 +72,17 @@ cria_personagem = function(_nome, _idade, _status, _level, _foto) constructor
 personagem1 = new cria_personagem("Juca", 50,"Bom", 1, spr_player);
 personagem2 = new cria_personagem("Anastacia", 33,"Ruim", 2, spr_player);
 
+contador = function()
+{
+	static num = 0; //num é 0 porém ele é iniciado apenas uma vez
+	num++;// num aumenta em 1
+	show_debug_message(num);////Exibe 1
+}
 
+#endregion
+
+//Estruturas
+#region struct (estruturas)
 /*estrutura = 
 {
 	nome   : "Juca", //termina com virgula
@@ -100,6 +111,10 @@ personagem2 = new cria_personagem("Anastacia", 33,"Ruim", 2, spr_player);
 //Ganhando 2 level
 //estrutura.ganha_level(2);
 //show_message(estrutura.level);
+
+
+
+#endregion
 
 
 
