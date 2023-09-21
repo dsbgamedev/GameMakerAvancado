@@ -6,13 +6,23 @@
 
 cria_personagem = function(_nome, _idade, _status, _level, _foto) constructor
 {
-	nome   = _nome;
+	/*static*/ nome   = _nome;//essa linha só vai ser executado uma vez
 	idade  = _idade;
 	status = _status;
 	level  = _level
 	foto   = _foto;	
 	
-	desenha_personagem = function()
+	//Variavel pos X e pos Y, que inicia no mieo da tela
+	
+	//Um método que muda o valor do pos x e posy com base no clique e posição do mouse
+	
+	
+	/*static muda_nome = function(_texto)
+	{
+		nome = _texto;	
+	}*/
+	
+	static desenha_personagem = function()
 	{
 		#region dados do mapa
 		//Pegando as informações do mapa
@@ -71,6 +81,7 @@ cria_personagem = function(_nome, _idade, _status, _level, _foto) constructor
 
 personagem1 = new cria_personagem("Juca", 50,"Bom", 1, spr_player);
 personagem2 = new cria_personagem("Anastacia", 33,"Ruim", 2, spr_player);
+personagem2.muda_nome("Maravilha");
 
 contador = function()
 {
