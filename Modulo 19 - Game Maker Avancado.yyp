@@ -46,6 +46,8 @@
     {"id":{"name":"Inicializar","path":"scripts/Inicializar/Inicializar.yy",},},
     {"id":{"name":"obj_variavel","path":"objects/obj_variavel/obj_variavel.yy",},},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
+    {"id":{"name":"obj_tile","path":"objects/obj_tile/obj_tile.yy",},},
+    {"id":{"name":"obj_calculo_binario","path":"objects/obj_calculo_binario/obj_calculo_binario.yy",},},
     {"id":{"name":"obj_triangle","path":"objects/obj_triangle/obj_triangle.yy",},},
     {"id":{"name":"ac_curva","path":"animcurves/ac_curva/ac_curva.yy",},},
     {"id":{"name":"obj_ds_map","path":"objects/obj_ds_map/obj_ds_map.yy",},},

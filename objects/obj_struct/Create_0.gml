@@ -4,6 +4,7 @@
 //Contrutor
 #region construtor
 
+///@function cria_personagem(nome, idade, status, level, foto)
 cria_personagem = function(_nome, _idade, _status, _level, _foto) constructor
 {
 	/*static*/ nome   = _nome;//essa linha só vai ser executado uma vez
