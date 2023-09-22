@@ -11,11 +11,27 @@ cria_personagem = function(_nome, _idade, _status, _level, _foto) constructor
 	status = _status;
 	level  = _level
 	foto   = _foto;	
+	static larg   = 250;
+	static alt   = 120;
+	
 	
 	//Variavel pos X e pos Y, que inicia no mieo da tela
+	static pos_x = room_width / 2;
+	static pos_y = room_height / 2;
 	
 	//Um método que muda o valor do pos x e posy com base no clique e posição do mouse
-	
+	static movendo = function()
+	{
+		//Fazendo o posx e posy irem para a posição do mouse
+		//Checar se o mouse_x esta dentro de mim
+		var _pos_x = mouse_x == clamp(mouse_x, pos_x - larg / 2, pos_x + larg / 2);
+		var _pos_y = mouse_y == clamp(mouse_y, pos_y - larg / 2, pos_y + larg / 2);
+		if(mouse_check_button(mb_left) && _pos_x && _pos_y)
+		{
+			pos_x = mouse_x;
+			pos_y = mouse_y;
+		}
+	}
 	
 	/*static muda_nome = function(_texto)
 	{
@@ -36,12 +52,10 @@ cria_personagem = function(_nome, _idade, _status, _level, _foto) constructor
 	
 		#region Variaveis de desenho
 		//Variaveis de desenho
-		var _larg   = 250;
-		var _alt    = 120;
-		var _xx		= room_width / 2; /* room_width / 2;*/
-		var _yy		= room_height / 2;  /*room_height / 2;*/
-		var _xscale = _larg / sprite_get_width(spr_moldura);//achando a escala do retangulo
-		var _yscale = _alt / sprite_get_height(spr_moldura);
+		var _xx		= pos_x; /* room_width / 2;*/
+		var _yy		= pos_y;  /*room_height / 2;*/
+		var _xscale = larg / sprite_get_width(spr_moldura);//achando a escala do retangulo
+		var _yscale = alt / sprite_get_height(spr_moldura);
 		var _x1     = _xx;
 		var _y1     = _yy;
 		var _marg_x = 7 + sprite_get_width(spr_player); //7 Pixel + a sprite
@@ -56,8 +70,8 @@ cria_personagem = function(_nome, _idade, _status, _level, _foto) constructor
 		draw_sprite_ext(spr_moldura, 0, _x1, _y1,_xscale,_yscale,  0, c_white,1);
 	
 		//Ajustando a posição inicial do texto
-		_x1 = _xx - _larg / 2 + _marg_x;
-		_y1 = _yy - _alt / 2 + _marg_y;
+		_x1 = _xx - larg / 2 + _marg_x;
+		_y1 = _yy - alt / 2 + _marg_y;
 	
 		//Desenhando a sprite
 		var _spr_w = sprite_get_width(_foto);
@@ -81,7 +95,20 @@ cria_personagem = function(_nome, _idade, _status, _level, _foto) constructor
 
 personagem1 = new cria_personagem("Juca", 50,"Bom", 1, spr_player);
 personagem2 = new cria_personagem("Anastacia", 33,"Ruim", 2, spr_player);
-personagem2.muda_nome("Maravilha");
+personagem3 = new cria_personagem("Jose", 10,"Ruim", 2, spr_player);
+personagem4 = new cria_personagem("Maria", 60,"Ruim", 2, spr_player);
+personagem5 = new cria_personagem("Ana", 40,"Ruim", 2, spr_player);
+//personagem2.muda_nome("Maravilha");
+
+//Crie um vetor com um personagem, crie 5 personagens
+
+//Crie um vetor com os personagens
+personagens = [personagem1,personagem2,personagem3,personagem4,personagem5];
+
+qtd_personagens = 1;
+
+//Eu aperto enter e ele coloca uma personagem na tela
+
 
 contador = function()
 {

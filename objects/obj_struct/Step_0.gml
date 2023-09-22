@@ -9,7 +9,16 @@
 
 */
 
+//personagem2.movendo();
 
+for(var i = 0; i < qtd_personagens; i++)
+{
+	personagens[i].movendo();
+}
+
+if(keyboard_check_released(vk_enter)) qtd_personagens++;
+
+	
 
 
 
