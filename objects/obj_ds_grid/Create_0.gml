@@ -72,12 +72,9 @@ desenha_gride = function(_gride)
 			
 			//Mudando a cor no intervalo do X
 			//Se o i estiver dentro desse intervalo retorna true, se nao false
-			var _pos_x1 = posicoes[? "x1"];
-			var _pos_y1 = posicoes[? "y1"];
-			var _intervalo_i = i == clamp(i, min(_pos_x1,_mouse_x), max(_mouse_x, _pos_x1));
-			var _intervalo_j = j == clamp(j,min(_pos_y1,_mouse_y), max(_mouse_y, _pos_y1));
-			
-			if(_intervalo_i && _intervalo_j)
+			var _intervalo_i = i == clamp(i, posicoes[? "x1"], _mouse_x);
+		
+			if(_intervalo_i)
 			{
 				//Mudando a cor no intervalo X w do Y
 				if(mouse_check_button(mb_left))  _cor = c_orange;
@@ -103,32 +100,13 @@ desenha_gride = function(_gride)
 	}
 }
 
-//Preenche
-preenche = function(_mapa, _botao)
-{
-	var _x1, _y1, _x2, _y2, _valor;
-	_x1 = _mapa[? "x1"];
-	_x2 = _mapa[? "x2"];
-	_y2 = _mapa[? "y2"];
-	_y1 = _mapa[? "y1"];
-	
-	//Checando o botão
-	_valor = _botao == mb_left ? "X" : "";
-	
-	
-	//Preechendo o intervalo da grid com o valor
-	ds_grid_set_region(gride, _x1,_y1,_x2,_y2, _valor);
-	
-	
-}
-
 //Funcao de selecao
-seleciona_gride = function(_botao)
+seleciona_gride = function()
 {
 	var _mouse_x = mouse_x div size;
 	var _mouse_y = mouse_y div size;
 	//Checando se o mouse clicou	
-	if(mouse_check_button_pressed(_botao))
+	if(mouse_check_button_pressed(mb_left))
 	{
 		//Definindo a posição inicial
 		posicoes[? "x1"] = _mouse_x; 
@@ -136,20 +114,11 @@ seleciona_gride = function(_botao)
 	}
 	
 	//Checando a posição final
-	if(mouse_check_button_released(_botao))
+	if(mouse_check_button_pressed(mb_left))
 	{
-		//Definindo a posição final
+		//Definindo a posição fnicial
 		posicoes[? "x2"] = _mouse_x; 
 		posicoes[? "y2"] = _mouse_y; 
-		
-		//Soltei o mouse, eu executo a função de preencher
-		preenche(posicoes, _botao);
-		
-		//Zerar as posições do mapa
-		posicoes[? "x1"] = 0;
-		posicoes[? "x2"] = 0;
-		posicoes[? "y2"] = 0;
-		posicoes[? "y1"] = 0;
 	}
 	
 }
