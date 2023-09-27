@@ -9,5 +9,6 @@
 //show_debug_message(posicoes[? "x1"]);
 //show_debug_message(posicoes[? "y1"]);
 
-seleciona_gride();
+seleciona_gride(mb_left);
+seleciona_gride(mb_right);
 
