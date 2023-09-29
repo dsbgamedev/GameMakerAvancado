@@ -25,7 +25,7 @@ faz_coisa = function()
 {
 	//Diminuindo
 	image_xscale -= dim;
-	image_xscale = image_xscale;
+	image_yscale = image_xscale;
 	
 	//Movendo
 	x += lengthdir_x(vel, dir);

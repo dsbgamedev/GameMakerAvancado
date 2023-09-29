@@ -43,7 +43,7 @@ desenhando_na_surface = function ()
 {
 
 	//Sempre que o mouse clicar eu vou desenha uma bola vemerlha
-	var _mouse_click = mouse_check_button_pressed(mb_left);
+	var _mouse_click =mouse_check_button_pressed(mb_left);
 	
 	if(_mouse_click)
 	{
