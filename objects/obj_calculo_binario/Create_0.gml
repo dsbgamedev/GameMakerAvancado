@@ -36,13 +36,22 @@ criatile = function()
 	draw_sprite(spr_player, 0,_mouse_x, _mouse_y);
 
 	//Quando eu clicar eu crio o objeto Tile na posição X e Y do mouse dentro da grid
-	var _mouse_click = mouse_check_button_released(mb_left);
+	var _mouse_click = mouse_check_button(mb_left);
 	//Checar se nao estou por cima do tile
 	var _mouse_livre = position_meeting( mouse_x, mouse_y, obj_tile);
 	if( _mouse_click && _mouse_livre)
 	{
 		//Criando o tile
 		instance_create_layer(_mouse_x,_mouse_y,"Tiles",obj_tile);
+		//Rodando o user event do objeto Tile
+		if(instance_exists(obj_tile))
+		{
+			with(obj_tile)
+			{
+				//Esse código, roda dentro de TODOS os objetos tile
+				event_user(0);
+			}
+		}
 	}
 	
 }

@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+img	= 0;
+
 //Checando se algum tile em cima de mim
 	if (place_meeting(x, y - 1, obj_tile)) img += 1;
 

@@ -60,6 +60,7 @@
     {"id":{"name":"spr_teste","path":"sprites/spr_teste/spr_teste.yy",},},
     {"id":{"name":"sq_teste","path":"sequences/sq_teste/sq_teste.yy",},},
     {"id":{"name":"obj_seq","path":"objects/obj_seq/obj_seq.yy",},},
+    {"id":{"name":"Object18","path":"objects/Object18/Object18.yy",},},
     {"id":{"name":"Note2","path":"notes/Note2/Note2.yy",},},
     {"id":{"name":"obj_numeros","path":"objects/obj_numeros/obj_numeros.yy",},},
     {"id":{"name":"obj_cor","path":"objects/obj_cor/obj_cor.yy",},},
