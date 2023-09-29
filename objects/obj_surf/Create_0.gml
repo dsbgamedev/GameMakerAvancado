@@ -64,6 +64,49 @@ desenhando_na_surface = function ()
 	}
 
 }
+
+cria_sangue = function()
+{
+	//Checando se o mouse clicou
+	var _mouse_click = mouse_check_button_released(mb_left);
+	
+	if(_mouse_click)
+	{
+		//Criando varios
+		repeat(irandom_range(5, 25))
+		{
+			//Criando o sangue
+			instance_create_layer(mouse_x, mouse_y, layer, obj_sangue);
+		}
+	}
+	
+}
+
+//Desenha sangue
+desenha_sangue = function()
+{
+	//Checando se o sangue existe
+	if(instance_exists(obj_sangue))
+	{
+		//Definindo a surface
+		if(surface_exists(surf))
+		{
+			surface_set_target(surf)	
+		
+			//Desenhando o sangue nela
+			with(obj_sangue)
+			{
+				draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);	
+			}
+			
+			//Resetando a surface
+			surface_reset_target();
+			
+		}
+		
+	}
+}
+
 #endregion
 
 
