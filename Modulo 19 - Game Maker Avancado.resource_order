@@ -18,6 +18,7 @@
   ],
   "ResourceOrderSettings": [
     {"name":"spr_luz","order":8,"path":"sprites/spr_luz/spr_luz.yy",},
+    {"name":"obj_efeito","order":18,"path":"objects/obj_efeito/obj_efeito.yy",},
     {"name":"obj_moeda","order":1,"path":"objects/obj_moeda/obj_moeda.yy",},
     {"name":"spr_mascara","order":5,"path":"sprites/spr_mascara/spr_mascara.yy",},
     {"name":"obj_tiro","order":2,"path":"objects/obj_tiro/obj_tiro.yy",},
@@ -43,6 +44,7 @@
     {"name":"Note2","order":1,"path":"notes/Note2/Note2.yy",},
     {"name":"obj_cor","order":5,"path":"objects/obj_cor/obj_cor.yy",},
     {"name":"obj_ds_outro","order":10,"path":"objects/obj_ds_outro/obj_ds_outro.yy",},
+    {"name":"GM_Electricity_spr_Electricity1","order":1,"path":"sprites/GM_Electricity_spr_Electricity1/GM_Electricity_spr_Electricity1.yy",},
     {"name":"obj_teste","order":8,"path":"objects/obj_teste/obj_teste.yy",},
   ],
 }

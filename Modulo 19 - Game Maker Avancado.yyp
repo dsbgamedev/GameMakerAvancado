@@ -35,6 +35,7 @@
   },
   "resources": [
     {"id":{"name":"spr_luz","path":"sprites/spr_luz/spr_luz.yy",},},
+    {"id":{"name":"obj_efeito","path":"objects/obj_efeito/obj_efeito.yy",},},
     {"id":{"name":"obj_moeda","path":"objects/obj_moeda/obj_moeda.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_mascara","path":"sprites/spr_mascara/spr_mascara.yy",},},
@@ -66,8 +67,10 @@
     {"id":{"name":"Object18","path":"objects/Object18/Object18.yy",},},
     {"id":{"name":"Note2","path":"notes/Note2/Note2.yy",},},
     {"id":{"name":"obj_numeros","path":"objects/obj_numeros/obj_numeros.yy",},},
+    {"id":{"name":"ps_part","path":"particles/ps_part/ps_part.yy",},},
     {"id":{"name":"obj_cor","path":"objects/obj_cor/obj_cor.yy",},},
     {"id":{"name":"obj_ds_outro","path":"objects/obj_ds_outro/obj_ds_outro.yy",},},
+    {"id":{"name":"GM_Electricity_spr_Electricity1","path":"sprites/GM_Electricity_spr_Electricity1/GM_Electricity_spr_Electricity1.yy",},},
     {"id":{"name":"obj_teste","path":"objects/obj_teste/obj_teste.yy",},},
   ],
   "RoomOrderNodes": [
