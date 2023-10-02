@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_mascara",
-    "path": "sprites/spr_mascara/spr_mascara.yy",
+    "name": "spr_luz",
+    "path": "sprites/spr_luz/spr_luz.yy",
   },
   "spriteMaskId": null,
   "visible": true,

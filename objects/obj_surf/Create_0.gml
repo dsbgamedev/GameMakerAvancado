@@ -65,6 +65,7 @@ desenhando_na_surface = function ()
 
 }
 
+//Cria sangue
 cria_sangue = function()
 {
 	//Checando se o mouse clicou
@@ -103,6 +104,31 @@ desenha_sangue = function()
 			surface_reset_target();
 			
 		}
+		
+	}
+}
+
+//Desenhar luz
+desenha_luz = function()
+{
+	//Checar se a Surface existe
+	if(surface_exists(surf))
+	{
+		//Definir o meu alvo
+		surface_set_target(surf);
+		//Limpando a minha surface
+		draw_clear_alpha(c_black, 1);
+		
+		//Mudar o blendmode desse desenho
+		gpu_set_blendmode(bm_subtract);		
+		//Desenhando a luz ou a mascara
+		var _variavel = random_range(-0.05, 0.05);
+		draw_sprite_ext(spr_luz, 0, mouse_x, mouse_y,2 + _variavel,2 + _variavel,0,c_white, 1);
+		
+		//Resetar o blendmode
+		gpu_set_blendmode(bm_normal);		
+		
+		surface_reset_target();
 		
 	}
 }
