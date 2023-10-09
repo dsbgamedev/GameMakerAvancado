@@ -36,6 +36,7 @@
     {"name":"obj_triangle","order":3,"path":"objects/obj_triangle/obj_triangle.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
     {"name":"obj_ds_map","order":12,"path":"objects/obj_ds_map/obj_ds_map.yy",},
+    {"name":"obj_part_sys","order":21,"path":"objects/obj_part_sys/obj_part_sys.yy",},
     {"name":"spr_cor","order":3,"path":"sprites/spr_cor/spr_cor.yy",},
     {"name":"spr_tiro","order":2,"path":"sprites/spr_tiro/spr_tiro.yy",},
     {"name":"spr_sangue","order":7,"path":"sprites/spr_sangue/spr_sangue.yy",},

@@ -60,6 +60,7 @@
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"ac_curva","path":"animcurves/ac_curva/ac_curva.yy",},},
     {"id":{"name":"obj_ds_map","path":"objects/obj_ds_map/obj_ds_map.yy",},},
+    {"id":{"name":"obj_part_sys","path":"objects/obj_part_sys/obj_part_sys.yy",},},
     {"id":{"name":"spr_cor","path":"sprites/spr_cor/spr_cor.yy",},},
     {"id":{"name":"spr_tiro","path":"sprites/spr_tiro/spr_tiro.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
