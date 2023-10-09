@@ -3,10 +3,10 @@
 
 //Criando uma explosao de particulas quando o mouse clicar
 
-/*if(mouse_check_button_released(mb_left))
+if(mouse_check_button_released(mb_left))
 {
-	part_emitter_burst(global.part_sys, part_emitter_burst());
-}*/
+	part_emitter_burst(global.part_sys,part_em, particle2,50);
+}
 
 
 

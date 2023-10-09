@@ -13,6 +13,7 @@ global.part_sys = part_system_create();
 //criando o meu emissor particulas
 part_em = part_emitter_create(global.part_sys);
 
+
 //Criando a minha particula
 particle2 = part_type_create();
 
@@ -37,11 +38,11 @@ var _meio_x = room_width / 2;
 var _meio_y = room_height / 2;
 
 //Definindo a região
-part_emitter_region(blobal.part_em, part_em, _meio_x - 200, 
-		_meio_y, _meio_y - 200, _meio_y +200, ps_shape_ellipse,ps_distr_linear );
+part_emitter_region(global.part_sys, part_em, _meio_x - 200, _meio_x + 200, _meio_y - 200, _meio_y + 200, 
+ps_shape_ellipse,ps_distr_linear );
 		
 //Criando a particula
-part_emitter_stream(global.part_sys, part_em, particle2, 50);
+//part_emitter_stream(global.part_sys, part_em, particle2, 1);
 
 
 
