@@ -29,6 +29,23 @@ part_type_orientation(particle2, 0, 359, 0, 20, 1);
 part_type_blend(particle2, 1);
 part_type_life(particle2, 1, 20);
 
+//Criando a minha particula
+part = part_type_create();
+//Configurando a minha particula
+part_type_shape(part, pt_shape_flare);
+part_type_size(part, 0.01, 0.1, 0.01, .1);
+part_type_colour3(part, c_orange, c_red, c_aqua);
+part_type_alpha3(part, .5, .1, 0);
+part_type_speed(part, 1, 5, 0, 0);
+part_type_direction(part, 80, 100, 0, 0);
+part_type_gravity(part, .01, 270);
+part_type_orientation(part, 0, 359, 2, 0, 0);
+part_type_blend(part, true);
+part_type_life(part, room_speed, room_speed * 3);
+part_type_death(part, 1, particle2);
+
+//Crie uma particula sua
+
 
 //Configurando o part emitter
 //Burst cria uma monte de particulas de uma vez, tipo uma explosão
