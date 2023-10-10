@@ -4,6 +4,8 @@
 //Limpando a particula
 part_type_destroy(particle2);
 
+part_type_destroy(part);
+
 //Limpando o emitter
 part_emitter_destroy(global.part_sys, part_em);
 
