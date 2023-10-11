@@ -23,8 +23,8 @@ salva_nome = function()
 	ini_open("save.ini");
 	ini_write_string("dados", "nome", nome);
 	ini_close();
+	//ds_grid_width();
 	
-	show_message("Feito!");
 }
 
 carrega_nome = function()
@@ -35,6 +35,24 @@ carrega_nome = function()
 	ini_close();
 	
 }
+
+salva_grid = function ()
+{
+	ini_open("save.ini");
+	
+	//Acessar o grid
+	with(obj_ds_grid)
+	{
+		//Salvando a minha grid em uma String
+		var _grid = ds_grid_width(gride);
+		//Escrevendo a grid no ini
+		ini_write_string("grid", "grid", _grid);
+		
+	}
+	
+	ini_close();
+}
+
 
 
 
