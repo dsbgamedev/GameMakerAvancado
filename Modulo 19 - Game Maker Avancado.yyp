@@ -33,7 +33,7 @@
     {"name":"fogo","path":"particlelib/fogo/fogo.yy",},
   ],
   "MetaData": {
-    "IDEVersion": "2023.8.2.106",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"GM_Fire_spr_Fire","path":"sprites/GM_Fire_spr_Fire/GM_Fire_spr_Fire.yy",},},
