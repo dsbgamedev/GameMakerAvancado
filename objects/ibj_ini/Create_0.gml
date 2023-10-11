@@ -53,8 +53,23 @@ salva_grid = function ()
 	ini_close();
 }
 
-
-
+carrega_grid = function()
+{
+	ini_open("save.ini");
+	
+	//Passando a grid para a DS da grid
+	var _grid = ini_read_string("grid", "grid", "");
+	
+	with(obj_ds_grid)
+	{
+		//Passando a grid para as ds grid
+		ds_grid_read(grid, _grid);
+		
+	}
+	
+	
+	ini_close();
+}
 
 
 
