@@ -79,6 +79,10 @@ controla_gamepad = function()
 	//gamepad_axis_value();
 	velh = gamepad_axis_value(0, gp_axislh) * vel;
 	velv = gamepad_axis_value(0, gp_axislv) * vel;
+	
+	//Definindo a deadzone do axis
+	gamepad_set_axis_deadzone(0, .2);
+	
 	//show_debug_message(gamepad_axis_value(0, gp_axislh));
 }
 
