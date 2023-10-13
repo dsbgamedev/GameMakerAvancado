@@ -8,6 +8,13 @@ if(mover)
 {
 	x = mouse_x;
 	y = mouse_y;	
+	
+	//Se eu estou me movendo, então o som vai ser afetado
+	if(x != xprevious || y != yprevious)
+	{
+		//Se eu estou me movendo
+		audio_listener_velocity(10,10,0);
+	}
 }
 
 if(keyboard_check_pressed(vk_tab))
