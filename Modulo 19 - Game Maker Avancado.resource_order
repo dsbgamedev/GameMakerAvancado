@@ -27,6 +27,7 @@
     {"name":"obj_tiro","order":2,"path":"objects/obj_tiro/obj_tiro.yy",},
     {"name":"obj_particula","order":19,"path":"objects/obj_particula/obj_particula.yy",},
     {"name":"obj_ds_grid","order":13,"path":"objects/obj_ds_grid/obj_ds_grid.yy",},
+    {"name":"Script2","order":1,"path":"scripts/Script2/Script2.yy",},
     {"name":"fnt_titulo","order":1,"path":"fonts/fnt_titulo/fnt_titulo.yy",},
     {"name":"obj_texto","order":4,"path":"objects/obj_texto/obj_texto.yy",},
     {"name":"spr_tile","order":9,"path":"sprites/spr_tile/spr_tile.yy",},

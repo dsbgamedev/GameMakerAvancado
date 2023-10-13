@@ -50,6 +50,7 @@
     {"id":{"name":"obj_particula","path":"objects/obj_particula/obj_particula.yy",},},
     {"id":{"name":"obj_ds_grid","path":"objects/obj_ds_grid/obj_ds_grid.yy",},},
     {"id":{"name":"fnt_texto","path":"fonts/fnt_texto/fnt_texto.yy",},},
+    {"id":{"name":"Script2","path":"scripts/Script2/Script2.yy",},},
     {"id":{"name":"fnt_titulo","path":"fonts/fnt_titulo/fnt_titulo.yy",},},
     {"id":{"name":"obj_texto","path":"objects/obj_texto/obj_texto.yy",},},
     {"id":{"name":"spr_tile","path":"sprites/spr_tile/spr_tile.yy",},},
