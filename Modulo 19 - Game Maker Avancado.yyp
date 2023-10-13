@@ -43,6 +43,7 @@
     {"id":{"name":"obj_efeito","path":"objects/obj_efeito/obj_efeito.yy",},},
     {"id":{"name":"obj_moeda","path":"objects/obj_moeda/obj_moeda.yy",},},
     {"id":{"name":"obj_volta","path":"objects/obj_volta/obj_volta.yy",},},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_mascara","path":"sprites/spr_mascara/spr_mascara.yy",},},
     {"id":{"name":"obj_tiro","path":"objects/obj_tiro/obj_tiro.yy",},},

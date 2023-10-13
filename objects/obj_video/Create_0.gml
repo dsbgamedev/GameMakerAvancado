@@ -3,7 +3,11 @@
 
 video_open("marioRun.mp4");
 
-video_close();
+//video_pause();
+
+pausado = true;
+
+
 
 
 

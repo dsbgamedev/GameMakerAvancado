@@ -22,6 +22,7 @@
     {"name":"obj_efeito","order":18,"path":"objects/obj_efeito/obj_efeito.yy",},
     {"name":"obj_moeda","order":1,"path":"objects/obj_moeda/obj_moeda.yy",},
     {"name":"obj_volta","order":20,"path":"objects/obj_volta/obj_volta.yy",},
+    {"name":"obj_player","order":28,"path":"objects/obj_player/obj_player.yy",},
     {"name":"spr_mascara","order":5,"path":"sprites/spr_mascara/spr_mascara.yy",},
     {"name":"obj_tiro","order":2,"path":"objects/obj_tiro/obj_tiro.yy",},
     {"name":"obj_particula","order":19,"path":"objects/obj_particula/obj_particula.yy",},
