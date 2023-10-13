@@ -27,7 +27,9 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"marioRun.mp4","CopyToMask":-1,"filePath":"datafiles",},
+  ],
   "isEcma": false,
   "LibraryEmitters": [
     {"name":"fogo","path":"particlelib/fogo/fogo.yy",},
@@ -50,6 +52,7 @@
     {"id":{"name":"fnt_titulo","path":"fonts/fnt_titulo/fnt_titulo.yy",},},
     {"id":{"name":"obj_texto","path":"objects/obj_texto/obj_texto.yy",},},
     {"id":{"name":"spr_tile","path":"sprites/spr_tile/spr_tile.yy",},},
+    {"id":{"name":"obj_video","path":"objects/obj_video/obj_video.yy",},},
     {"id":{"name":"spr_particula","path":"sprites/spr_particula/spr_particula.yy",},},
     {"id":{"name":"spr_moldura","path":"sprites/spr_moldura/spr_moldura.yy",},},
     {"id":{"name":"Inicializar","path":"scripts/Inicializar/Inicializar.yy",},},

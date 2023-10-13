@@ -29,6 +29,7 @@
     {"name":"fnt_titulo","order":1,"path":"fonts/fnt_titulo/fnt_titulo.yy",},
     {"name":"obj_texto","order":4,"path":"objects/obj_texto/obj_texto.yy",},
     {"name":"spr_tile","order":9,"path":"sprites/spr_tile/spr_tile.yy",},
+    {"name":"obj_video","order":27,"path":"objects/obj_video/obj_video.yy",},
     {"name":"spr_particula","order":10,"path":"sprites/spr_particula/spr_particula.yy",},
     {"name":"spr_moldura","order":6,"path":"sprites/spr_moldura/spr_moldura.yy",},
     {"name":"obj_variavel","order":7,"path":"objects/obj_variavel/obj_variavel.yy",},
