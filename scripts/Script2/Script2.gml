@@ -6,3 +6,5 @@ function Script2(){
 
 //Variavel para saber quantos controles estão sendo controlados
 global.controles = [];
+
+global.gamepad = 0;
