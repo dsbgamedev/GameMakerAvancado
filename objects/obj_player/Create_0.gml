@@ -34,13 +34,14 @@ checa_gamepad = function()
 
 global.gamepad = checa_gamepad();
 
-conrtola = function()
+controla = function()
 {
 	//global.gamepad = checa_gamepad();
-	/*if(keyboard_check_pressed(vk_enter))
+	if(keyboard_check_pressed(vk_enter))
 	{
-		global.gamepad = false;
-	}*/
+		//global.gamepad = false;
+		global.gamepad = !global.gamepad;
+	}
 	
 	show_debug_message("kkkkkkkk");
 	
@@ -55,19 +56,34 @@ conrtola = function()
 	}
 }
 
-conrtola_keyboard = function()
+controla_keyboard = function()
 {
 	//if(keyboard_check(vk_shift)) show_debug_message("aaaaaaaaaa");
 	//se mover para as direções
+	show_debug_message("teclado");
+	var _up, _down, _left, _rigth;
 	
+	_up    = keyboard_check(vk_up);
+	_down  = keyboard_check(vk_down);
+	_left  = keyboard_check(vk_left);
+	_rigth = keyboard_check(vk_right);
+	
+	velh = (_rigth - _left) * vel;
+	velv = (_down - _up)    * vel;
+
 }
 
-conrtola_gamepad = function()
+controla_gamepad = function()
 {
-	
+	//show_debug_message("Gamepad");
+	//gamepad_axis_value();
+	velh = gamepad_axis_value(0, gp_axislh) * vel;
+	velv = gamepad_axis_value(0, gp_axislv) * vel;
+	//show_debug_message(gamepad_axis_value(0, gp_axislh));
 }
 
 checa_gamepad();
+
 
 
 
