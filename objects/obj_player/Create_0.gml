@@ -27,6 +27,12 @@ checa_gamepad = function()
 		}
 	}
 	
+	if(_gamepad)
+	{
+		//Definindo a deadzone do axis
+		gamepad_set_axis_deadzone(0, .2);
+	}
+	
 	return _gamepad
 	//show_message(global.controles);
 	//show_debug_message(global.controles);
@@ -77,13 +83,23 @@ controla_gamepad = function()
 {
 	//show_debug_message("Gamepad");
 	//gamepad_axis_value();
-	velh = gamepad_axis_value(0, gp_axislh) * vel;
-	velv = gamepad_axis_value(0, gp_axislv) * vel;
 	
-	//Definindo a deadzone do axis
-	gamepad_set_axis_deadzone(0, .2);
+	var _velh = gamepad_axis_value(0, gp_axislh);
+	var _velv = gamepad_axis_value(0, gp_axislv);
 	
-	//show_debug_message(gamepad_axis_value(0, gp_axislh));
+	//if(_velh > 0)
+	//{
+	//	_velh = ceil(_velh);	
+	//}
+	//else
+	//{
+	//	_velv = floor(_velh);
+	//}
+	
+	//_velv = _velv > 0 ? ceil(_velv) : floor(_velv);
+	
+	velh = _velh * vel;
+	velv = _velv * vel;	
 }
 
 checa_gamepad();
