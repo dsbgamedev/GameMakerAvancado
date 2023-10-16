@@ -43,7 +43,7 @@ checa_gamepad = function()
 	//show_debug_message(global.controles);
 }
 
-global.gamepad = checa_gamepad();
+//global.gamepad = checa_gamepad();
 
 controla = function()
 {
