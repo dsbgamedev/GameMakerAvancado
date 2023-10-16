@@ -7,7 +7,7 @@ var _rigth, _left, _jump, _chao;
 
 _rigth = keyboard_check(vk_right);
 _left  = keyboard_check(vk_left);
-_jump  = keyboard_check(vk_space);
+_jump  = keyboard_check_pressed(vk_space);
 
 
 //Checando se no meu pé mais um pixel esta tocando no chão
@@ -24,13 +24,21 @@ if(!_chao)
 }
 else
 {
-	//Zerando o velv
+	//Zerando o velv quando ele estiver no chão
 	velv = 0;
+	
+	//Fazendo ele pular ao apertar o botão de pulo
+	if(_jump)
+	{
+		velv = -max_velv;
+	}
+	
+	
 }
 //show_debug_message(velv);
 
 //Sistema de movimentação e colisão
-move_and_collide(velh, velv, obj_block);
+move_and_collide(velh, velv, obj_block, 4);
 
 
 
