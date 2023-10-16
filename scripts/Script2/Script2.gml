@@ -5,6 +5,6 @@ function Script2(){
 }
 
 //Variavel para saber quantos controles estão sendo controlados
-global.controles = [];
-
+global.controles = ds_list_create();
+global.p1 = 0;
 global.gamepad = 0;

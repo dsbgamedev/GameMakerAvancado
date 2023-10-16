@@ -3,7 +3,7 @@
 
 controla();
 
-show_debug_message(global.controles);
+//show_debug_message(global.controles);
 
 x += velh;
 y += velv;

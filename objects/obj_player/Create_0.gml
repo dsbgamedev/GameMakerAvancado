@@ -20,8 +20,9 @@ checa_gamepad = function()
 	{
 		//Se o slot(a entrada) atual estiver conectada, eu aviso no meu
 		//Array de controles
-		global.controles[i] = gamepad_is_connected(i);
-		if(global.controles[i])
+		//global.controles[i] = gamepad_is_connected(i);
+		ds_list_add(global.controles, gamepad_is_connected(i));
+		if(gamepad_is_connected(i))/*(global.controles[i])*/
 		{
 			_gamepad++;	
 		}
@@ -32,7 +33,11 @@ checa_gamepad = function()
 		//Definindo a deadzone do axis
 		gamepad_set_axis_deadzone(0, .2);
 	}
+	//show_message(ds_list_size(global.controles));
+	//var _p1 = ds_list_find_value(global.controles, 1);
+	global.p1 = ds_list_find_value(global.controles, 1);
 	
+	//show_message(_p1);
 	return _gamepad
 	//show_message(global.controles);
 	//show_debug_message(global.controles);
@@ -88,13 +93,13 @@ controla_gamepad = function()
 	//show_debug_message("Gamepad");
 	//gamepad_axis_value();
 	
-	var _velh = gamepad_axis_value(0, gp_axislh);
-	var _velv = gamepad_axis_value(0, gp_axislv);
-	var _a    = gamepad_button_check_pressed(0, gp_face1);
-	var _rt   = gamepad_button_check(0, gp_shoulderrb);
-	var _rt2  = gamepad_button_value(0, gp_shoulderrb);
+	var _velh = gamepad_axis_value(global.p1, gp_axislh);
+	var _velv = gamepad_axis_value(global.p1, gp_axislv);
+	var _a    = gamepad_button_check_pressed(global.p1, gp_face1);
+	var _rt   = gamepad_button_check(global.p1, gp_shoulderrb);
+	var _rt2  = gamepad_button_value(global.p1, gp_shoulderrb);
 	
-	show_debug_message(_rt2);
+	show_debug_message(global.p1);
 	
 	
 	//if(_velh > 0)
@@ -127,7 +132,7 @@ efeito1 = function(_mudar = false, _controle = false)
 	if(_controle)
 	{
 		var _esc = _escala - 1.3;
-		gamepad_set_vibration(0, _esc, _esc);
+		gamepad_set_vibration(global.p1, _esc, _esc);
 	}
 	
 	image_xscale = _escala;
@@ -164,7 +169,7 @@ efeito2 = function(_mudar = false, _qtd = 0)
 		//Se a quantidade for 1 então o meu valor vai ser 255
 		_valor = 255 * _qtd;
 		
-		gamepad_set_vibration(0, 0, _qtd);
+		gamepad_set_vibration(global.p1, 0, _qtd);
 	}
 	
 	image_blend = make_color_rgb(255, 255 - _valor, 255 - _valor);
