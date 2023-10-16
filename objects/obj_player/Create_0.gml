@@ -91,6 +91,11 @@ controla_gamepad = function()
 	var _velh = gamepad_axis_value(0, gp_axislh);
 	var _velv = gamepad_axis_value(0, gp_axislv);
 	var _a    = gamepad_button_check_pressed(0, gp_face1);
+	var _rt   = gamepad_button_check(0, gp_shoulderrb);
+	var _rt2  = gamepad_button_value(0, gp_shoulderrb);
+	
+	show_debug_message(_rt2);
+	
 	
 	//if(_velh > 0)
 	//{
@@ -105,17 +110,24 @@ controla_gamepad = function()
 	
 	velh = _velh * vel;
 	velv = _velv * vel;	
-	efeito1(_a);
-	efeito1();
+	efeito1(_a, true);
+	efeito2(_rt, _rt2);
 }
 
-efeito1 = function(_mudar = false)
+efeito1 = function(_mudar = false, _controle = false)
 {
 	static _escala = 1;
 	
 	if(_mudar)
 	{
 		_escala = 2;	
+	}
+	
+	//Se eu mudei a escala ele vibra
+	if(_controle)
+	{
+		var _esc = _escala - 1.3;
+		gamepad_set_vibration(0, _esc, _esc);
 	}
 	
 	image_xscale = _escala;
@@ -128,18 +140,31 @@ efeito1 = function(_mudar = false)
 	}
 }
 
-efeito2 = function(_mudar = false)
+efeito2 = function(_mudar = false, _qtd = 0)
 {
 	static _valor  = 0; 
-	if(_mudar)
+	
+	if(_qtd == 0)
 	{
-		//Fazendo o valor chegar em 255
-		_valor = lerp(_valor, 255, 0.01);
+		//Codigo do teclado
+		if(_mudar)
+		{
+			//Fazendo o valor chegar em 255
+			_valor = lerp(_valor, 255, 0.01);
+		}
+		else
+		{
+			//Voltando o valro para zero
+			_valor = lerp(_valor, 0, 0.01);
+		}
 	}
 	else
 	{
-		//Voltando o valro para zero
-		_valor = lerp(_valor, 0, 0.01);
+		//Código para o gamepad
+		//Se a quantidade for 1 então o meu valor vai ser 255
+		_valor = 255 * _qtd;
+		
+		gamepad_set_vibration(0, 0, _qtd);
 	}
 	
 	image_blend = make_color_rgb(255, 255 - _valor, 255 - _valor);
