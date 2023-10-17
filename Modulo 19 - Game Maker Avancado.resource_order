@@ -52,6 +52,7 @@
     {"name":"spr_personagem","order":11,"path":"sprites/spr_personagem/spr_personagem.yy",},
     {"name":"spr_moeda","order":1,"path":"sprites/spr_moeda/spr_moeda.yy",},
     {"name":"snd_sino","order":2,"path":"sounds/snd_sino/snd_sino.yy",},
+    {"name":"obj_plat_movel","order":32,"path":"objects/obj_plat_movel/obj_plat_movel.yy",},
     {"name":"obj_acao","order":11,"path":"objects/obj_acao/obj_acao.yy",},
     {"name":"spr_teste","order":4,"path":"sprites/spr_teste/spr_teste.yy",},
     {"name":"obj_rampa","order":31,"path":"objects/obj_rampa/obj_rampa.yy",},

@@ -38,9 +38,28 @@ else
 //show_debug_message(velv);
 
 //Sistema de movimentação e colisão
-move_and_collide(velh, velv, all, 4);
+var _col = move_and_collide(velh, velv, all, 12);
 
+//Quando o vetor col nao for vazio, eu checo se eu colidi com a rampa
 
+if(array_length(_col) > 0) // Array_length tamanho do nosso vetor
+{
+	var _nome = object_get_name(_col[0].object_index);
+	//show_message(_nome);
+	
+	//Se eu colidir com a rampa, eu zero o velv
+	if(_nome == "obj_rampa" )
+	{
+		velv = 0;
+	}
+	
+	//Plataforma movel
+	if(_nome == "obj_plat_movel")
+	{
+		velv = 0;
+	}
+
+}
 
 
 
