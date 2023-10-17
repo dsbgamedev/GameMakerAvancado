@@ -38,7 +38,7 @@ else
 //show_debug_message(velv);
 
 //Sistema de movimentação e colisão
-move_and_collide(velh, velv, obj_block, 4);
+move_and_collide(velh, velv, all, 4);
 
 
 
