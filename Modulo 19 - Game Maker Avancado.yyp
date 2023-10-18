@@ -78,6 +78,7 @@
     {"id":{"name":"obj_surf","path":"objects/obj_surf/obj_surf.yy",},},
     {"id":{"name":"spr_personagem","path":"sprites/spr_personagem/spr_personagem.yy",},},
     {"id":{"name":"spr_moeda","path":"sprites/spr_moeda/spr_moeda.yy",},},
+    {"id":{"name":"obj_escorrega","path":"objects/obj_escorrega/obj_escorrega.yy",},},
     {"id":{"name":"snd_sino","path":"sounds/snd_sino/snd_sino.yy",},},
     {"id":{"name":"obj_plat_movel","path":"objects/obj_plat_movel/obj_plat_movel.yy",},},
     {"id":{"name":"obj_acao","path":"objects/obj_acao/obj_acao.yy",},},

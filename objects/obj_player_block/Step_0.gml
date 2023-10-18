@@ -57,6 +57,9 @@ if(array_length(_col) > 0) // Array_length tamanho do nosso vetor
 	if(_nome == "obj_plat_movel")
 	{
 		velv = 0;
+		
+		//Movendo o player na plataforma
+		x += _col[0].hspeed;
 	}
 
 }
