@@ -44,24 +44,16 @@ var _col = move_and_collide(velh, velv, all, 12);
 
 if(array_length(_col) > 0) // Array_length tamanho do nosso vetor
 {
-	var _nome = object_get_name(_col[0].object_index);
-	//show_message(_nome);
+	var _objeto = _col[0].object_index;
 	
-	//Se eu colidir com a rampa, eu zero o velv
-	if(_nome == "obj_rampa" )
+	switch(_objeto)
 	{
-		velv = 0;
+		case obj_escorrega: 
+			 velv -= 1;
+			 break;
+		case obj_plat_movel: x += _objeto.hspeed; velv = 0; break;
+					
 	}
-	
-	//Plataforma movel
-	if(_nome == "obj_plat_movel")
-	{
-		velv = 0;
-		
-		//Movendo o player na plataforma
-		x += _col[0].hspeed;
-	}
-
 }
 
 
